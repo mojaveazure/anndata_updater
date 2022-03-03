@@ -30,21 +30,20 @@ from typing import List
 
 import anndata
 
-from anndata import AnnData
 from scipy.sparse import csc_matrix
 
 __all__: List[str] = [
     'update_anndata',
 ]
 
-def update_anndata(adata: AnnData) -> AnnData:
+def update_anndata(adata): # type: (anndata.AnnData) -> anndata.AnnData
     """update_anndata
 
     Args:
-        adata: An AnnData object
+        adata (anndata.AnnData): An AnnData object
 
     Returns:
-        An updated AnnData object
+        (anndata.AnnData) An updated AnnData object
     """
     #   Update adata.X
     if isinstance(adata.X, csc_matrix):
