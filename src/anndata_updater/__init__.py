@@ -30,13 +30,14 @@ from typing import List
 
 import anndata
 
+from anndata import AnnData
 from scipy.sparse import csc_matrix
 
 __all__: List[str] = [
     'update_anndata',
 ]
 
-def update_anndata(adata: anndata.AnnData) -> anndata.AnnData:
+def update_anndata(adata: AnnData) -> AnnData:
     """update_anndata
 
     Args:
