@@ -132,7 +132,7 @@ logging.debug("Updating AnnData object took %s seconds", fmttime(start=update_st
 
 logging.info("Writing out H5AD file to %s", args['output'])
 write_start = time.time()
-adata.write_h5ad(args['output'])
+adata.write_h5ad(args['output'], compression='gzip')
 logging.debug("Writing H5AD file took %s seconds", fmttime(start=write_start))
 
 logging.debug("Program took %s seconds", fmttime(start=read_start))
