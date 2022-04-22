@@ -19,3 +19,4 @@ dist/
 #   Ignore documentation website
 ################################
 docs/build/
+docs/source/_build
